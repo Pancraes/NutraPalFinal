@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap Multi Step Form | Webdevtrick.com</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="css/questions.css">
+</head>
+<body>
+
+  <header class="header">
+    <a href="#">
+      <img class="logo" alt="Preppin logo" src="img/omnifood-logo.png" />
+    </a>
+
+    <button class="btn-mobile-nav">
+      <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+      <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+    </button>
+  </header>
+<div class="content">
+  <div class="content__inner">
+    <div class="container overflow-hidden">
+      <div class="multisteps-form">
+        <div class="row">
+          <div class="col-12 col-lg-8 ml-auto mr-auto mb-4">
+            <div class="multisteps-form__progress">
+              <button class="multisteps-form__progress-btn js-active" type="button" title="User Info"></button>
+              <button class="multisteps-form__progress-btn" type="button" title="Age Range"></button>
+              <button class="multisteps-form__progress-btn" type="button" title="Measurements"></button>
+              <button class="multisteps-form__progress-btn" type="button" title="Dietary Restrictions"></button>
+              <button class="multisteps-form__progress-btn" type="button" title="Diet Type"></button>
+              <button class="multisteps-form__progress-btn" type="button" title="Foods to Avoid"></button>
+              <button class="multisteps-form__progress-btn" type="button" title="Health Goals"></button>
+              <button class="multisteps-form__progress-btn" type="button" title="Activity Level"></button>
+              <button class="multisteps-form__progress-btn" type="button" title="Summarize Your Day"></button>
+              <button class="multisteps-form__progress-btn" type="button" title="Fitness Activities"></button>
+              <button class="multisteps-form__progress-btn" type="button" title="Meal Frequency"></button>
+              <button class="multisteps-form__progress-btn" type="button" title="Eating Schedule"></button>
+              <button class="multisteps-form__progress-btn" type="button" title="Meal Preferences"></button>
+              <button class="multisteps-form__progress-btn" type="button" title="Budget"></button>
+              <button class="multisteps-form__progress-btn" type="button" title="Additional Messages"></button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-lg-8 m-auto">
+            <form class="multisteps-form__form">
+
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="fade">
+                <h3 class="multisteps-form__title">What is your biological sex?</h3>
+                <div class="multisteps-form__content"></br>
+                  <label><input type="radio" name="gender" value="Male"> Male</label></br>
+                  <label><input type="radio" name="gender" value="Female"> Female</label>
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="fade">
+                <h3 class="multisteps-form__title">What is your age range?</h3>
+                <div class="multisteps-form__content"></br>
+                  <label><input type="radio" name="age" value="Under 18"> Under 18</label></br>
+                  <label><input type="radio" name="age" value="18-26"> 18-26</label></br>
+                  <label><input type="radio" name="age" value="27-40"> 27-40</label></br>
+                  <label><input type="radio" name="age" value="40+"> 40+</label>
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="fade">
+                <h3 class="multisteps-form__title">What are your current measurements?</h3>
+                <div class="multisteps-form__content"></br>
+                  <label>Height: <input type="text" name="height"></label></br>
+                  <label>Weight: <input type="text" name="weight"></label></br>
+                  <label>Body Fat % (Optional): <input type="text" name="bodyFat"></label>
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="fade">
+                <h3 class="multisteps-form__title">Do you have any dietary restrictions or allergies?</h3>
+                <div class="multisteps-form__content"></br>
+                  <label><input type="radio" name="dietary_restrictions" value="Yes"> Yes (Please specify: e.g., gluten, dairy, nuts, etc.)</label>
+                  <label><input type="radio" name="dietary_restrictions" value="No"> No</label>
+                  <textarea name="dietary_restrictions_details" rows="2" cols="50"></textarea>
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="fade">
+                <h3 class="multisteps-form__title">What is your preferred diet type?</h3>
+                <div class="multisteps-form__content"></br>
+                  <label><input type="radio" name="diet_type" value="Vegetarian"> Vegetarian</label></br>
+                  <label><input type="radio" name="diet_type" value="Vegan"> Vegan</label></br>
+                  <label><input type="radio" name="diet_type" value="Pescatarian"> Pescatarian</label></br>
+                  <label><input type="radio" name="diet_type" value="Keto"> Keto</label></br>
+                  <label><input type="radio" name="diet_type" value="Paleo"> Paleo</label></br>
+                  <label><input type="radio" name="diet_type" value="Mediterranean"> Mediterranean</label></br>
+                  <label><input type="radio" name="diet_type" value="No Preference"> No Preference</label></br>
+                  <label><input type="radio" name="diet_type" value="Other"> Other (Please specify):</label>
+                  <textarea name="diet_type_other" rows="2" cols="50"></textarea>
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="fade">
+                <h3 class="multisteps-form__title">Are there any specific foods you dislike or avoid?</h3>
+                <div class="multisteps-form__content"></br>
+                  <textarea name="foods_to_avoid" rows="4" cols="50"></textarea>
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="fade">
+                <h3 class="multisteps-form__title">What are your main health and fitness goals? (Select all that apply)</h3>
+                <div class="multisteps-form__content"></br>
+                  <label><input type="checkbox" name="health_goals" value="Weight Loss"> Weight Loss</label></br>
+                  <label><input type="checkbox" name="health_goals" value="Muscle Gain"> Muscle Gain</label></br>
+                  <label><input type="checkbox" name="health_goals" value="Maintenance"> Maintenance</label></br>
+                  <label><input type="checkbox" name="health_goals" value="Improve Energy Levels"> Improve Energy Levels</label></br>
+                  <label><input type="checkbox" name="health_goals" value="Enhance Athletic Performance"> Enhance Athletic Performance</label></br>
+                  <label><input type="checkbox" name="health_goals" value="Manage a Health Condition"> Manage a Health Condition (e.g., diabetes, hypertension)</label></br>
+                  <label><input type="checkbox" name="health_goals" value="Other"> Other (Please specify):</label>
+                  <textarea name="health_goals_other" rows="2" cols="50"></textarea>
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="fade">
+                <h3 class="multisteps-form__title">How would you summarize your daily activity level?</h3>
+                <div class="multisteps-form__content"></br>
+                  <label><input type="radio" name="activity_level" value="Sedentary"> Sedentary (little or no exercise)</label></br>
+                  <label><input type="radio" name="activity_level" value="Lightly Active"> Lightly Active (light exercise/sports 1-3 days/week)</label></br>
+                  <label><input type="radio" name="activity_level" value="Moderately Active"> Moderately Active (moderate exercise/sports 3-5 days/week)</label></br>
+                  <label><input type="radio" name="activity_level" value="Very Active"> Very Active (hard exercise/sports 6-7 days a week)</label></br>
+                  <label><input type="radio" name="activity_level" value="Extra Active"> Extra Active (very hard exercise/sports & physical job)</label>
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="fade">
+                <h3 class="multisteps-form__title">Summarize your day</h3>
+                <div class="multisteps-form__content"></br>
+                  <label><input type="radio" name="summarize_day" value="Sitting all day long"> Sitting all day long at work</label></br>
+                  <label><input type="radio" name="summarize_day" value="Always on my feet"> I'm always on my feet</label></br>
+                  <label><input type="radio" name="summarize_day" value="Physical activity"> Doing lots of physical activity</label></br>
+                  <label><input type="radio" name="summarize_day" value="Staying at home"> Staying at home</label>
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="fade">
+                <h3 class="multisteps-form__title">Do you participate in fitness activities or sports regularly?</h3>
+                <div class="multisteps-form__content"></br>
+                  <label><input type="radio" name="fitness_activities" value="Yes"> Yes</label>
+                  <label><input type="radio" name="fitness_activities" value="No"> No</label>
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="fade">
+                <h3 class="multisteps-form__title">How many meals do you typically eat per day?</h3>
+                <div class="multisteps-form__content"></br>
+                  <label><input type="radio" name="meal_frequency" value="3 main meals"> 3 main meals</label></br>
+                  <label><input type="radio" name="meal_frequency" value="3 main meals + snacks"> 3 main meals + snacks</label></br>
+                  <label><input type="radio" name="meal_frequency" value="5-6 smaller meals"> 5-6 smaller meals</label></br>
+                  <label><input type="radio" name="meal_frequency" value="Other"> Other (Please specify):</label>
+                  <textarea name="meal_frequency_other" rows="2" cols="50"></textarea>
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="fade">
+                <h3 class="multisteps-form__title">What is your usual eating schedule? (Specify times for meals)</h3>
+                <div class="multisteps-form__content"></br>
+                  <label>Breakfast: <input type="text" name="breakfast_time"></label></br>
+                  <label>Lunch: <input type="text" name="lunch_time"></label></br>
+                  <label>Dinner: <input type="text" name="dinner_time"></label></br>
+                  <label>Snacks: <input type="text" name="snacks_time"></label>
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="fade">
+                <h3 class="multisteps-form__title">Do you prefer any specific meal types or cuisines?</h3>
+                <div class="multisteps-form__content"></br>
+                  <textarea name="meal_preferences" rows="4" cols="50"></textarea>
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="fade">
+                <h3 class="multisteps-form__title">What is your average monthly budget for groceries?</h3>
+                <div class="multisteps-form__content"></br>
+                  <label><input type="radio" name="budget" value="Less than $100"> Less than $100</label></br>
+                  <label><input type="radio" name="budget" value="$100-$200"> $100-$200</label></br>
+                  <label><input type="radio" name="budget" value="$200-$300"> $200-$300</label></br>
+                  <label><input type="radio" name="budget" value="$300-$400"> $300-$400</label></br>
+                  <label><input type="radio" name="budget" value="More than $400"> More than $400</label>
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                <h3 class="multisteps-form__title">Additional Messages</h3>
+                <div class="multisteps-form__content"></br>
+                    <textarea name="additional_messages" rows="4" cols="50"></textarea>
+                    <div class="button-row d-flex mt-4">
+                        <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                        <button class="btn btn-success ml-auto" type="button" id="FinishQuestion" title="FinishQuestion">Finish</button>
+                    </div>
+                </div>
+            </div>
+            
+            <script>
+                document.getElementById("FinishQuestion").onclick = function () {
+                    window.location.assign("recipes.html");
+                }
+            </script>
+        
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/questions.js"></script>
+
+</body>
+</html>
