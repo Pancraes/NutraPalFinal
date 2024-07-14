@@ -13,6 +13,11 @@
     <a href="#">
       <img class="logo" alt="Preppin logo" src="img/omnifood-logo.png" />
     </a>
+    <nav class="main-nav">
+      <ul class="main-nav-list">
+        <li><a class="main-nav-link" href="#how">Back to Home</a></li>
+      </ul>
+    </nav>
 
     <button class="btn-mobile-nav">
       <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
@@ -25,24 +30,27 @@
       <div class="multisteps-form">
         <div class="row">
           <div class="col-12 col-lg-8 ml-auto mr-auto mb-4">
-            <div class="multisteps-form__progress">
-              <button class="multisteps-form__progress-btn js-active" type="button" title="User Info"></button>
-              <button class="multisteps-form__progress-btn" type="button" title="Age Range"></button>
-              <button class="multisteps-form__progress-btn" type="button" title="Measurements"></button>
-              <button class="multisteps-form__progress-btn" type="button" title="Dietary Restrictions"></button>
-              <button class="multisteps-form__progress-btn" type="button" title="Diet Type"></button>
-              <button class="multisteps-form__progress-btn" type="button" title="Foods to Avoid"></button>
-              <button class="multisteps-form__progress-btn" type="button" title="Health Goals"></button>
-              <button class="multisteps-form__progress-btn" type="button" title="Activity Level"></button>
-              <button class="multisteps-form__progress-btn" type="button" title="Summarize Your Day"></button>
-              <button class="multisteps-form__progress-btn" type="button" title="Fitness Activities"></button>
-              <button class="multisteps-form__progress-btn" type="button" title="Meal Frequency"></button>
-              <button class="multisteps-form__progress-btn" type="button" title="Eating Schedule"></button>
-              <button class="multisteps-form__progress-btn" type="button" title="Meal Preferences"></button>
-              <button class="multisteps-form__progress-btn" type="button" title="Budget"></button>
-              <button class="multisteps-form__progress-btn" type="button" title="Additional Messages"></button>
+            <div class="progress-container">
+              <div class="multisteps-form__progress">
+                <button class="multisteps-form__progress-btn js-active" type="button" title="User Info"></button>
+                <button class="multisteps-form__progress-btn" type="button" title="Age Range"></button>
+                <button class="multisteps-form__progress-btn" type="button" title="Measurements"></button>
+                <button class="multisteps-form__progress-btn" type="button" title="Dietary Restrictions"></button>
+                <button class="multisteps-form__progress-btn" type="button" title="Diet Type"></button>
+                <button class="multisteps-form__progress-btn" type="button" title="Foods to Avoid"></button>
+                <button class="multisteps-form__progress-btn" type="button" title="Health Goals"></button>
+                <button class="multisteps-form__progress-btn" type="button" title="Activity Level"></button>
+                <button class="multisteps-form__progress-btn" type="button" title="Summarize Your Day"></button>
+                <button class="multisteps-form__progress-btn" type="button" title="Fitness Activities"></button>
+                <button class="multisteps-form__progress-btn" type="button" title="Meal Frequency"></button>
+                <button class="multisteps-form__progress-btn" type="button" title="Eating Schedule"></button>
+                <button class="multisteps-form__progress-btn" type="button" title="Meal Preferences"></button>
+                <button class="multisteps-form__progress-btn" type="button" title="Budget"></button>
+                <button class="multisteps-form__progress-btn" type="button" title="Additional Messages"></button>
+              </div>
             </div>
           </div>
+          
         </div>
         <div class="row">
           <div class="col-12 col-lg-8 m-auto">
@@ -90,8 +98,9 @@
                 <h3 class="multisteps-form__title">Do you have any dietary restrictions or allergies?</h3>
                 <div class="multisteps-form__content"></br>
                   <label><input type="radio" name="dietary_restrictions" value="Yes"> Yes (Please specify: e.g., gluten, dairy, nuts, etc.)</label>
+                  <textarea name="dietary_restrictions_details" rows="1" cols="50"></textarea></br>
                   <label><input type="radio" name="dietary_restrictions" value="No"> No</label>
-                  <textarea name="dietary_restrictions_details" rows="2" cols="50"></textarea>
+                  
                   <div class="button-row d-flex mt-4">
                     <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
                     <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
@@ -109,8 +118,7 @@
                   <label><input type="radio" name="diet_type" value="Paleo"> Paleo</label></br>
                   <label><input type="radio" name="diet_type" value="Mediterranean"> Mediterranean</label></br>
                   <label><input type="radio" name="diet_type" value="No Preference"> No Preference</label></br>
-                  <label><input type="radio" name="diet_type" value="Other"> Other (Please specify):</label>
-                  <textarea name="diet_type_other" rows="2" cols="50"></textarea>
+                  <label>Other (Please specify): <input type="text" name="diet_type_other"></label></br>
                   <div class="button-row d-flex mt-4">
                     <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
                     <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
@@ -139,7 +147,7 @@
                   <label><input type="checkbox" name="health_goals" value="Enhance Athletic Performance"> Enhance Athletic Performance</label></br>
                   <label><input type="checkbox" name="health_goals" value="Manage a Health Condition"> Manage a Health Condition (e.g., diabetes, hypertension)</label></br>
                   <label><input type="checkbox" name="health_goals" value="Other"> Other (Please specify):</label>
-                  <textarea name="health_goals_other" rows="2" cols="50"></textarea>
+                  <textarea name="health_goals_other" rows="1" cols="50"></textarea>
                   <div class="button-row d-flex mt-4">
                     <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
                     <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
@@ -179,7 +187,7 @@
               <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="fade">
                 <h3 class="multisteps-form__title">Do you participate in fitness activities or sports regularly?</h3>
                 <div class="multisteps-form__content"></br>
-                  <label><input type="radio" name="fitness_activities" value="Yes"> Yes</label>
+                  <label><input type="radio" name="fitness_activities" value="Yes"> Yes</label></br>
                   <label><input type="radio" name="fitness_activities" value="No"> No</label>
                   <div class="button-row d-flex mt-4">
                     <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
@@ -195,7 +203,7 @@
                   <label><input type="radio" name="meal_frequency" value="3 main meals + snacks"> 3 main meals + snacks</label></br>
                   <label><input type="radio" name="meal_frequency" value="5-6 smaller meals"> 5-6 smaller meals</label></br>
                   <label><input type="radio" name="meal_frequency" value="Other"> Other (Please specify):</label>
-                  <textarea name="meal_frequency_other" rows="2" cols="50"></textarea>
+                  <textarea name="meal_frequency_other" rows="1" cols="50"></textarea>
                   <div class="button-row d-flex mt-4">
                     <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
                     <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
