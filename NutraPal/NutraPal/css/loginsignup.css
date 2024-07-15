@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
 .unique-login-signup * {
   box-sizing: border-box;
 }
 
 .unique-login-signup body {
-  background: #f6f5f7;
+  background: #e8f5e9; /* Light Green */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   height: 100vh;
   margin: -20px 0 50px;
 }
@@ -18,60 +18,46 @@
 .unique-login-signup h1 {
   font-weight: bold;
   margin: 0;
-  font-size: 4rem; /* Increased font size */
-  margin-bottom: 10px; /* Added margin-bottom for spacing */
 }
 
 .unique-login-signup h2 {
   text-align: center;
-  font-size: 3.5rem; /* Increased font size */
-  margin-bottom: 20px; /* Added margin-bottom for spacing */
 }
 
 .unique-login-signup p {
-  font-size: 2rem; /* Increased font size */
+  font-size: 14px;
   font-weight: 100;
-  line-height: 2.5rem;
+  line-height: 20px;
   letter-spacing: 0.5px;
   margin: 20px 0 30px;
 }
 
 .unique-login-signup span {
-  font-size: 1.5rem; /* Increased font size */
-  margin-bottom: 20px; /* Added margin-bottom for spacing */
+  font-size: 12px;
 }
 
 .unique-login-signup a {
   color: #333;
-  font-size: 1.5rem; /* Increased font size */
+  font-size: 14px;
   text-decoration: none;
   margin: 15px 0;
 }
 
 .unique-login-signup button {
   border-radius: 20px;
-  border: 1px solid #388E3C; /* Darker Green */
-  background-color: #388E3C; /* Darker Green */
+  border: 1px solid #4CAF50; /* Green */
+  background-color: #4CAF50; /* Green */
   color: #FFFFFF;
-  font-size: 2rem; /* Increased font size */
+  font-size: 12px;
   font-weight: bold;
-  padding: 15px 55px; /* Increased padding */
+  padding: 12px 45px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  transition: transform 0.2s ease-in-out, background-color 0.3s, border-color 0.3s, box-shadow 0.2s ease-in-out;
-  margin-top: 20px; /* Added margin-top for spacing */
-}
-
-.unique-login-signup button:hover {
-  transform: scale(1.05); /* Slightly scale up the button */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow to give a pop effect */
-  background-color: #4CAF50; /* Optional: Change the background color on hover */
-  border-color: #4CAF50; /* Optional: Change the border color on hover */
+  transition: transform 80ms ease-in;
 }
 
 .unique-login-signup button:active {
   transform: scale(0.95);
-  border-color: #E8F5E9; /* Light Green */
 }
 
 .unique-login-signup button:focus {
@@ -79,9 +65,8 @@
 }
 
 .unique-login-signup button.ghost {
-  background-color: #F57C00; /* Orange color for the background */
-  border-color: #F57C00; /* Orange color for the border */
-  color: #FFFFFF; /* White color for the text */
+  background-color: transparent;
+  border-color: #FFFFFF;
 }
 
 .unique-login-signup form {
@@ -93,16 +78,14 @@
   padding: 0 50px;
   height: 100%;
   text-align: center;
-  font-family: 'Rubik', sans-serif; /* Use Rubik font for forms */
 }
 
 .unique-login-signup input {
   background-color: #eee;
   border: none;
-  padding: 15px; /* Increased padding */
-  margin: 10px 0; /* Adjusted margin */
+  padding: 12px 15px;
+  margin: 8px 0;
   width: 100%;
-  font-size: 2rem; /* Increased font size */
 }
 
 .unique-login-signup .container {
@@ -112,10 +95,9 @@
       0 10px 10px rgba(0,0,0,0.22);
   position: relative;
   overflow: hidden;
-  width: 1100px; /* Increased width */
+  width: 768px;
   max-width: 100%;
-  min-height: 700px; /* Increased height */
-  padding: 40px; /* Added padding for spacing */
+  min-height: 480px;
 }
 
 .unique-login-signup .form-container {
@@ -177,8 +159,13 @@
 }
 
 .unique-login-signup .overlay {
-  background: #E8F5E9; /* Light Green */
-  color: #000000; /* Black for the rest of the text */
+  background: #4CAF50; /* Green */
+  background: -webkit-linear-gradient(to right, #4CAF50, #388E3C); /* Green gradient */
+  background: linear-gradient(to right, #4CAF50, #388E3C); /* Green gradient */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  color: #FFFFFF;
   position: relative;
   left: -100%;
   height: 100%;
@@ -204,7 +191,6 @@
   width: 50%;
   transform: translateX(0);
   transition: transform 0.6s ease-in-out;
-  padding: 60px 40px; /* Added padding for spacing */
 }
 
 .unique-login-signup .overlay-left {
@@ -235,20 +221,6 @@
   justify-content: center;
   align-items: center;
   margin: 0 5px;
-  height: 50px; /* Increased size */
-  width: 50px; /* Increased size */
-  font-size: 2rem; /* Increased font size */
-}
-
-.unique-login-signup .hello-friend, 
-.unique-login-signup .welcome-back {
-  color: #388E3C; /* Dark Green */
-  font-size: 4rem; /* Increased font size */
-  margin-bottom: 20px; /* Added margin-bottom for spacing */
-}
-
-/* Remove the circles */
-.unique-login-signup .social-container::before,
-.unique-login-signup .social-container::after {
-  content: none;
+  height: 40px;
+  width: 40px;
 }
