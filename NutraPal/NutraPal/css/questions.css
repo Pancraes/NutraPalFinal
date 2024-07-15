@@ -453,7 +453,7 @@ button.js-btn-prev:hover {
 }
 
 body {
-  background-image: url('https://cdn.discordapp.com/attachments/1260759630837973023/1262220881539895337/c157561a-2b4e-4594-8142-d0c5dcb8c83d.webp?ex=6695ce4d&is=66947ccd&hm=086dde5b93ea2252cab5aec16192f24355663affc64c23bfc8cb6a070eaa4b3f&');
+  background-image: url('../img/quizbg.png');
   background-size: cover; /* Ensure the background covers the entire page */
   background-repeat: no-repeat; /* Prevent the background from repeating */
   background-attachment: fixed; /* Fix the background so it doesn't scroll with the page */
@@ -462,3 +462,4 @@ body {
   margin: 0; /* Remove default margin */
   overflow: hidden; /* Prevent scrolling */
 }
+
