@@ -200,6 +200,8 @@ body {
 .btn--full:hover,
 .btn--full:active {
   background-color: #cf711f;
+  transform: scale(1.05); /* Slightly scale up the button */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow to give a pop effect */
 }
 
 .btn--outline:link,
@@ -211,7 +213,8 @@ body {
 .btn--outline:hover,
 .btn--outline:active {
   background-color: #fdf2e9;
-
+  transform: scale(1.05); /* Slightly scale up the button */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow to give a pop effect */
   /* border: 3px solid #fff; */
 
   /* Trick to add border inside */
@@ -228,6 +231,8 @@ body {
 .btn--form:hover {
   background-color: #fff;
   color: #555;
+  transform: scale(1.05); /* Slightly scale up the button */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow to give a pop effect */
 }
 
 .link:link,
@@ -289,4 +294,29 @@ body {
 
 strong {
   font-weight: 500;
+}
+
+/* Pricing Buttons */
+.pricing-plan .plan-sing-up a,
+.pricing-plan .plan-sing-up a:link,
+.pricing-plan .plan-sing-up a:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  background-color: #e67e22; /* Primary Color */
+  color: #fff;
+  transition: transform 0.2s ease-in-out, background-color 0.3s, box-shadow 0.2s ease-in-out;
+}
+
+.pricing-plan .plan-sing-up a:hover,
+.pricing-plan .plan-sing-up a:active {
+  transform: scale(1.05); /* Slightly scale up the button */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow to give a pop effect */
+  background-color: #cf711f; /* Slightly darker shade on hover */
 }

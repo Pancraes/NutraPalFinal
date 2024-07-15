@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-
 .logo {
   height: 2.2rem;
 }
@@ -23,10 +22,12 @@ body a {
 .content {
   width: 95%;
   margin: 0 auto 50px;
+  height: 90vh; /* Fixed height for the content container */
+  overflow-y: auto; /* Enable vertical scrolling */
 }
 
 .multisteps-form__form {
-  height: 900px; /* Set the height of the form container */
+  height: 100%; /* Set the height of the form container */
   overflow: hidden; /* Ensure content doesn't overflow */
 }
 
@@ -118,25 +119,13 @@ body a {
   height: 0;
   opacity: 0;
   visibility: hidden;
+  overflow-y: auto; /* Enable vertical scrolling for each panel */
 }
 .multisteps-form__panel.js-active {
   height: auto;
   opacity: 1;
   visibility: visible;
 }
-
-/* .multisteps-form__panel[data-animation="scaleIn"] {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
-}
-.multisteps-form__panel[data-animation="scaleIn"].js-active {
-  transition-property: all;
-  transition-duration: 0.2s;
-  transition-timing-function: linear;
-  transition-delay: 0s;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-} */
 
 .multisteps-form__panel[data-animation="fade"] {
     -webkit-animation: fadeInRight 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
@@ -249,7 +238,6 @@ body a {
   border: none;
   background: none;
   cursor: pointer;
-
   display: none;
 }
 
@@ -275,7 +263,7 @@ body a {
   height: 6rem;
   padding: 0 4.8rem;
   position: relative;
-  opacity:90%;
+  opacity: 90%;
 }
 
 .logo {
@@ -321,11 +309,11 @@ body a {
   transform: translateX(0);
 }
 .progress-container {
-  margin-top:3rem;
+  margin-top: 3rem;
   background-color: #fcefe3; /* Orange color */
   border-radius: 12px; /* Rounded corners */
   padding: 20px; /* Padding around the content */
-  opacity:90%;
+  opacity: 90%;
 }
 
 .multisteps-form__progress {
@@ -446,26 +434,27 @@ textarea:focus {
   border: 2px solid #55ad4d;
   outline: none;
 }
+
 button.js-btn-next,
 button.js-btn-prev {
   background-color: orange;
   border-color: orange;
   color: white;
+  transition: transform 0.3s ease-in-out; /* Add transition for hover effect */
 }
 
 button.js-btn-next:hover,
 button.js-btn-prev:hover {
   background-color: darkorange;
   border-color: darkorange;
+  transform: scale(1.1); /* Slightly increase size on hover */
 }
+
 body {
   background-image: url('https://t3.ftcdn.net/jpg/03/15/62/08/360_F_315620808_wEdzpQuvs3CQokO0Z4p9kC8Rt20zZE9L.jpghttps://t4.ftcdn.net/jpg/01/05/59/03/360_F_105590311_cAD04gw6SOQ7WSVgau0uvrql76ThgbQ9.jpg');
   background-size: cover; /* Ensure the background covers the entire page */
   background-repeat: no-repeat; /* Prevent the background from repeating */
   background-attachment: fixed; /* Fix the background so it doesn't scroll with the page */
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   height: 100vh; /* Full viewport height */
   margin: 0; /* Remove default margin */
   overflow: hidden; /* Prevent scrolling */
