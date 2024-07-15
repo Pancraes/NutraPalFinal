@@ -451,7 +451,7 @@ button.js-btn-prev:hover {
 }
 
 body {
-  background-image: url('https://t3.ftcdn.net/jpg/03/15/62/08/360_F_315620808_wEdzpQuvs3CQokO0Z4p9kC8Rt20zZE9L.jpghttps://t4.ftcdn.net/jpg/01/05/59/03/360_F_105590311_cAD04gw6SOQ7WSVgau0uvrql76ThgbQ9.jpg');
+  background-image: url('../img/quizbg.png');
   background-size: cover; /* Ensure the background covers the entire page */
   background-repeat: no-repeat; /* Prevent the background from repeating */
   background-attachment: fixed; /* Fix the background so it doesn't scroll with the page */
@@ -459,3 +459,4 @@ body {
   margin: 0; /* Remove default margin */
   overflow: hidden; /* Prevent scrolling */
 }
+
