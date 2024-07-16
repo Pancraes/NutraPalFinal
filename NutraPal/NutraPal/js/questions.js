@@ -149,3 +149,68 @@ const DOMstrings = {
       elem.dataset.animation = newType;
     });
   };
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const steps = document.querySelectorAll('.multisteps-form__panel');
+    const progressBtns = document.querySelectorAll('.multisteps-form__progress-btn');
+    const nextBtns = document.querySelectorAll('.js-btn-next');
+    const prevBtns = document.querySelectorAll('.js-btn-prev');
+    const submitBtn = document.getElementById('submit-btn');
+    let currentStep = 0;
+  
+    function updateSteps() {
+      steps.forEach((step, index) => {
+        step.classList.toggle('js-active', index === currentStep);
+        progressBtns[index].classList.toggle('js-active', index <= currentStep);
+      });
+    }
+  
+    function getAllFormData() {
+      const formData = {};
+      const formElements = document.querySelectorAll('.multisteps-form__form input, .multisteps-form__form textarea');
+      formElements.forEach(element => {
+        if (element.type === 'radio' || element.type === 'checkbox') {
+          if (element.checked) {
+            formData[element.name] = element.value;
+          }
+        } else {
+          formData[element.name] = element.value;
+        }
+      });
+      return formData;
+    }
+  
+    function downloadFile(content, filename) {
+      const blob = new Blob([content], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+  
+    nextBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        currentStep++;
+        updateSteps();
+      });
+    });
+  
+    prevBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        currentStep--;
+        updateSteps();
+      });
+    });
+  
+    submitBtn.addEventListener('click', () => {
+      const formData = getAllFormData();
+      const formDataText = JSON.stringify(formData, null, 2);
+      downloadFile(formDataText, 'form_data.txt');
+      window.location.assign("recipes.html");
+    });
+  
+    updateSteps();
+  });
+  

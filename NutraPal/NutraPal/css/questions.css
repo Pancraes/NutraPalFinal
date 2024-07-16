@@ -439,17 +439,35 @@ textarea:focus {
 
 button.js-btn-next,
 button.js-btn-prev {
-  background-color: orange;
-  border-color: orange;
+  background-color: #4CAF50; /* Green */
+  border-color: #4CAF50; /* Green */
   color: white;
   transition: transform 0.3s ease-in-out; /* Add transition for hover effect */
 }
 
 button.js-btn-next:hover,
 button.js-btn-prev:hover {
-  background-color: darkorange;
-  border-color: darkorange;
+  background-color: #388E3C; /* Darker Green */
+  border-color: #388E3C; /* Darker Green */
   transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+#submitBtn, .btn-green {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+#submitBtn:hover, .btn-green:hover {
+  background-color: #388E3C; /* Darker Green */
 }
 
 body {
@@ -462,4 +480,3 @@ body {
   margin: 0; /* Remove default margin */
   overflow: hidden; /* Prevent scrolling */
 }
-
